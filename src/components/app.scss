@@ -1,17 +1,24 @@
-.radioButtons{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-}
 .loadingbar{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border: solid;
     padding: 0 10px;
+    margin: 20px auto;
+}
+.radioButtons{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 35px 35px 35px;
+    margin: 20px auto;
 }
 .anonymButton{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 20px auto;
+}
+.donationButton{
+    text-align: center;
+    margin: 20px auto;
 }
