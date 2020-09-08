@@ -6,6 +6,8 @@ import Headline from './header/Headline';
 import Euro from './main/Euro';
 import Loadingbar from './main/Loadingbar';
 import AnonymButton from './main/AnonymButton';
+import DonationButton from './main/DonationButton';
+import Footer from './footer/Footer';
 
 // We use PureComponent instead of Component because it handles the shouldComponentUpdate method for us.
 // If we want to define our own shouldComponentUpdate logic we have to use Component instead of PureComponent.
@@ -17,6 +19,8 @@ class App extends PureComponent {
                 <Loadingbar/>
                 <Euro/>
                 <AnonymButton/>
+                <DonationButton/>
+                <Footer/>
             </>
         );
     }

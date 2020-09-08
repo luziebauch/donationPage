@@ -3,8 +3,8 @@ import '../app.scss';
 
 const Loadingbar = () => (
     <div className="loadingbar">
-        <p>0€</p>
-        <p>50€</p>
+        <div>0€</div>
+        <div>50€</div>
     </div>
 );
 export default Loadingbar;
