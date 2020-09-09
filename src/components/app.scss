@@ -8,7 +8,7 @@
 .radioButtons{
     margin: 20px auto 0px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 35px 35px 35px;
 }
 .anonymButton{
