@@ -11,7 +11,8 @@ const Footer = () => (
                         <ListItem
                             title="Luzie Bauch"
                             subtitle="20€"
-                            image="https://chayns.tobit.com/storage/60038-22141/Images/icon-72.png"
+                            image="https://sub60.tobit.com/u/2165503?size=300"
+                            circle
                         />
                     </List>
                 </div>
@@ -23,7 +24,8 @@ const Footer = () => (
                     <List>
                         <ListItem
                             title="20€ für Hans Franz"
-                            image="https://chayns.tobit.com/storage/60038-22141/Images/icon-72.png"
+                            image="https://sub60.tobit.com/u/1336931?size=90"
+                            circle
                         />
                     </List>
                 </div>
