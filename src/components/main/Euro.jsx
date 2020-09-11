@@ -3,52 +3,55 @@ import { RadioButton, Input, Checkbox, Button } from 'chayns-components/lib';
 import '../app.scss';
 
 function Euro() {
-    const [oneEuro, setOneEuro] = useState('');
-    const [twoEuro, setTwoEuro] = useState('');
-    const [fiveEuro, setFiveEuro] = useState('');
-    const [tenEuro, setTenEuro] = useState('');
-    const [someEuro, setSomeEuro] = useState('');
-    const [euro, setEuro] = useState(true);
+    const [euro] = useState('euro');
+    const [donate, setDonate] = useState(true);
+    const [check, setCheck] = useState(false);
+    const [ownPrice, setOwnPrice] = useState('');
 
     function alertUser() {
-        if (euro.checked === true) {
-            chayns.dialog.alert(`Danke für deine Spende, ${chayns.env.user.firstName}!`);
-        } else {
-            chayns.dialog.alert(`Bitte gebe eine Spende an, ${chayns.env.user.firstName}!`);
-        }
+        chayns.dialog.alert(`Danke für deine Spende, ${chayns.env.user.firstName}!`);
+    }
+    function disabledButton() {
+        setDonate(false);
+    }
+    function euroSign(event) {
+        console.log(event);
+        setCheck(true);
+        setOwnPrice(`${event.data}€`);
     }
 
     return (
         <div className="mainBody">
             <div className="radioButtons">
-                <RadioButton name={euro} value={oneEuro}>
+                <RadioButton name={euro} onChange={() => { disabledButton(); }}>
                     1€
                 </RadioButton>
-                <RadioButton name={euro} value={twoEuro}>
+                <RadioButton name={euro} onChange={() => { disabledButton(); }}>
                     2€
                 </RadioButton>
-                <RadioButton name={euro} value={fiveEuro}>
+                <RadioButton name={euro} onChange={() => { disabledButton(); }}>
                     5€
                 </RadioButton>
-                <RadioButton name={euro} value={tenEuro}>
+                <RadioButton name={euro} onChange={() => { disabledButton(); }}>
                     10€
                 </RadioButton>
-                <RadioButton name={euro} value={someEuro}>
+                <RadioButton name={euro} checked={check} onChange={() => { disabledButton(); }}>
                     <Input
                         className="input"
-                        type="number"
-                        id="search"
+                        type="text"
                         style={{ width: '200px', border: 'none' }}
                         placeholder="Eigener Betrag"
+                        onChange={() => { euroSign(event); }}
+                        value={ownPrice}
                     />
                 </RadioButton>
             </div>
             <div className="anonymButton">
                 <div>Anonym spenden</div>
-                <Checkbox type="checkbox" toggleButton="true"/>
+                <Checkbox type="checkbox" toggleButton={true}/>
             </div>
             <div className="donationButton">
-                <Button disabled="false" onClick={() => { alertUser(); }}>Spenden</Button>
+                <Button disabled={donate} onClick={() => { alertUser(); }}>Spenden</Button>
             </div>
         </div>
 
