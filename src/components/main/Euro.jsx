@@ -4,22 +4,22 @@ import '../app.scss';
 
 const Euro = () => (
     <div className="radioButtons">
-        <RadioButton>
+        <RadioButton name="euro">
             1€
         </RadioButton>
-        <RadioButton>
+        <RadioButton name="euro">
             2€
         </RadioButton>
-        <RadioButton>
+        <RadioButton name="euro">
             5€
         </RadioButton>
-        <RadioButton>
+        <RadioButton name="euro">
             10€
         </RadioButton>
-        <RadioButton>
+        <RadioButton name="euro">
             <Input
                 className="input"
-                type="text"
+                type="number"
                 id="search"
                 style={{ width: '200px', border: 'none' }}
                 placeholder="Eigener Betrag"
