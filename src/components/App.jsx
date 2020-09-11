@@ -5,8 +5,6 @@ import React, { PureComponent } from 'react';
 import Headline from './header/Headline';
 import Euro from './main/Euro';
 import Loadingbar from './main/Loadingbar';
-import AnonymButton from './main/AnonymButton';
-import DonationButton from './main/DonationButton';
 import Footer from './footer/Footer';
 
 // We use PureComponent instead of Component because it handles the shouldComponentUpdate method for us.
@@ -18,8 +16,6 @@ class App extends PureComponent {
                 <Headline headline="Spendenaktion"/>
                 <Loadingbar/>
                 <Euro/>
-                <AnonymButton/>
-                <DonationButton/>
                 <Footer/>
             </>
         );
